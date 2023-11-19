@@ -1,0 +1,22 @@
+# If you want Kiiro Electrum to appear in a Linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum-dash.desktop
+
+[Desktop Entry]
+Comment=KiirocoinElectrum Wallet
+Exec=sh -c "PATH=\"\\$HOME/.local/electrum-kiiro:\\$PATH\"; electrum-kiiro %u"
+GenericName[en_US]=Electrum Kiiro
+GenericName=Kiirocoin Electrum
+Icon=electrum-kiiro
+Name[en_US]=Kiirocoin Electrum
+Name=Kiirocoin Electrum
+Categories=Network;
+StartupNotify=true
+StartupWMClass=kiiro-electrum
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/dashpay;
+Actions=Testnet;
+
+[Desktop Action Testnet]
+Exec=sh -c "PATH=\"\\$HOME/.local/electrum-kiiro:\\$PATH\"; electrum-kiiro --testnet %u"
+Name=Testnet mode

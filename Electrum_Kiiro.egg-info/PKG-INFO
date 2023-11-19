@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: Electrum-Kiiro
+Version: 5.2.0.0
+Summary: Lightweight Kiirocoin Wallet
+Home-page: https://kiirocoin.org
+Maintainer: kiirodev
+Maintainer-email: kiiro.developer@gmail.com
+License: MIT License
+Description: Lightweight Kiirocoin Wallet
+Platform: UNKNOWN
+Requires-Python: >=3.8.0
+Provides-Extra: crypto
+Provides-Extra: fast
+Provides-Extra: full
+Provides-Extra: gui
+Provides-Extra: hardware
+Provides-Extra: tests

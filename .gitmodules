@@ -1,0 +1,6 @@
+[submodule "contrib/deterministic-build/electrum-locale"]
+	path = contrib/deterministic-build/electrum-locale
+	url = https://github.com/spesmilo/electrum-locale
+[submodule "contrib/x11_hash"]
+	path = contrib/x11_hash
+	url = https://github.com/mazaclub/x11_hash.git

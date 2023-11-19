@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2013 Soren Stoutner <soren@stoutner.com> -->
+<component type="desktop-application">
+  <id>org.kiirocoin.wallet</id>
+
+  <name>Electrum</name>
+  <summary>Kiirocoin Wallet</summary>
+
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+
+  <description>
+    <p>
+      Electrum is a lightweight Kiirocoin wallet focused is speed, with low resource usage and simplifying Kiirocoin.
+      Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Bitcoin system.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">electrum-kiiro.desktop</launchable>
+
+  <content_rating type="oars-1.1" />
+</component>
