@@ -1,10 +1,14 @@
 {
-    "Xeggex": [
-        "USD"
+    "CoinGecko": [
+        "USD",
+        "EUR",
+        "BTC",
+        "CAD"
     ],
     "CoinPaprika": [
         "USD",
         "EUR",
-        "BTC"
+        "BTC",
+        "CAD"
     ]
 }

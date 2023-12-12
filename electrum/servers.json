@@ -1,11 +1,11 @@
 {
-	"168.119.32.56": {
+	"electrum1.kiirocoin.org": {
         "pruning": "-",
         "t": "50001",
         "s": "50002",
         "version": "1.4"
     },
-	"5.78.105.104": {
+	"electrum2.kiirocoin.org": {
         "pruning": "-",
         "t": "50001",
         "s": "50002",

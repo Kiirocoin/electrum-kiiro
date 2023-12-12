@@ -1,5 +1,5 @@
 import asyncio
-from datetime import datetime
+from datetime import datetime, timedelta
 import inspect
 import sys
 import os
@@ -167,7 +167,7 @@ class CoinGecko(ExchangeBase):
 
     async def get_rates(self, ccy):
         json = await self.get_json('api.coingecko.com',
-                                   '/api/v3/coins/zcoin')
+                                   '/api/v3/coins/kiirocoin')
         r = dict([(ccy.upper(), Decimal(d))
                   for ccy, d in json['market_data']['current_price'].items()])
         return r
@@ -178,7 +178,7 @@ class CoinGecko(ExchangeBase):
 
     async def request_history(self, ccy):
         history = await self.get_json('api.coingecko.com',
-                                      '/api/v3/coins/zcoin/market_chart?vs_currency=%s&days=max' % ccy)
+                                      '/api/v3/coins/kiirocoin/market_chart?vs_currency=%s&days=max' % ccy)
 
         return dict([(datetime.utcfromtimestamp(h[0]/1000).strftime('%Y-%m-%d'), h[1])
                      for h in history['prices']])
@@ -196,12 +196,22 @@ class CoinPaprika(ExchangeBase):
         return r
 
     def history_ccys(self):
-        # Xeggex seems to have historical data for all ccys it supports
+        # CoinPaprika seems to have historical data for usd and btc only
         return CURRENCIES[self.name()]
 
     async def request_history(self, ccy):
-        return 
-
+        if ccy != "USD" and ccy != "BTC":
+                ccy = "USD"
+        limit = 1000
+        end_date = datetime.today()
+        start_date = end_date - timedelta(days=limit-1)
+        history = await self.get_json(
+            'api.coinpaprika.com',
+            "/v1/tickers/kiiro-kiirocoin/historical?start={}&quote={}&limit={}&interval=24h"
+            .format(start_date.strftime("%Y-%m-%d"), ccy, limit))
+        return dict([(datetime.strptime(
+            h['timestamp'], '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d'), h['price'])
+                     for h in history])
 
 class Xeggex(ExchangeBase):
 
