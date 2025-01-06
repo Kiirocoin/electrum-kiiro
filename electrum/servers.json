@@ -11,6 +11,12 @@
         "s": "50002",
         "version": "1.4"
     },
+        "electrum4.kiirocoin.org": {
+        "pruning": "-",
+        "t": "50001",
+        "s": "50002",
+        "version": "1.4"
+    },
         "electrum5.kiirocoin.org": {
         "pruning": "-",
         "t": "50001",
