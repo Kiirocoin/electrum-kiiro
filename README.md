@@ -1,4 +1,4 @@
-Kiiro Electrum - Lightweight Kiiro client
+Kiiro Electrum - Lightweight Kiiro Client
 =====================================
 
   Licence: MIT Licence
